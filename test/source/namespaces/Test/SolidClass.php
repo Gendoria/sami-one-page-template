@@ -32,4 +32,14 @@ class SolidClass extends AbstractClass implements TestInterface
     {
         return self::CLASS_CONST_STR;
     }
+
+    /**
+     * Sub class parameter method.
+     * 
+     * @param Sub\SubClass $subClassParam
+     */
+    public function subClassMethod(Sub\SubClass $subClassParam)
+    {
+        
+    }
 }
