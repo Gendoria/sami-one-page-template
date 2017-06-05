@@ -7,7 +7,7 @@ use Sami\Parser\Filter\TrueFilter;
 $iterator = Finder::create()
     ->files()
     ->name('*.php')
-    ->in(__DIR__.'/source')
+    ->in(__DIR__.'/source/namespaces')
 ;
 
 $sami = new Sami($iterator, [
