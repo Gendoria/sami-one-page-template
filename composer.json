@@ -1,7 +1,8 @@
 {
-    "name": "gendoria/sami-one-page-template",
-    "description": "Sami template for one page documentation.",
+    "name": "gendoria/sami-one-page-theme",
+    "description": "Sami theme for one page documentation.",
     "type": "sami-theme",
+    "keywords": ["sami", "template", "theme"],
     "require-dev": {
         "sami/sami": "~4.0"
     },
