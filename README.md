@@ -33,7 +33,7 @@ return new Sami($iterator, array(
     'build_dir'            => __DIR__.'/../build/sf2/%version%',
     'cache_dir'            => __DIR__.'/../cache/sf2/%version%',
     // use a custom theme directory (this works if you install your dependencies in vendor/ folder)
-    'template_dirs'        => array(__DIR__.'/vendor/gendoria/sami-one-page-template'),
+    'template_dirs'        => array(__DIR__.'/vendor/gendoria/sami-one-page-theme'),
     'default_opened_level' => 2,
 ));
 ```
