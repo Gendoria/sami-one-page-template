@@ -1,0 +1,68 @@
+{% extends "layout/base.twig" %}
+{% from _self import element %}
+
+{% block content %}
+    {% block content_header %}
+        <div class="container-fluid page title-page">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 id="__top__">{{project.config('title')|default("Technical documentation")}}</h1>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block toc %}
+        <div class="container-fluid page toc-page">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>{% block toc_title %}Table of contents{% endblock %}</h1>
+                </div>
+            </div>
+
+            <div class ="row">
+                <div class="col-xs-12">
+                    {% include 'toc.twig' %}
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+    {% block classes %}
+        <div class="container-fluid page classes-page">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>{% block documentation_title %}Documentation{% endblock %}</h1>
+                </div>
+            </div>
+            {{element(tree)}}
+        </div>
+    {% endblock %}
+
+{% endblock %}
+
+{% macro element(tree) %}
+    {% from _self import element %}
+        {%- for element in tree -%}
+            {% if element[2] %}
+{#                <div class="row">
+                    <div class="col-xs-12">
+                        <h2>{{ element[1]|raw }}</h2>
+                    </div>
+                </div>
+#}                
+                {{ element(element[2]) -}}
+            {% else %}
+                {% include 'class.twig' 
+                with {
+                    'class': element[1],
+                    'traits': element[1].getTraits(project.config('include_parent_data')), 
+                    'constants': element[1].getConstants(project.config('include_parent_data')), 
+                    'properties': element[1].getProperties(project.config('include_parent_data')), 
+                    'methods': element[1].getMethods(project.config('include_parent_data')),
+                }
+                %}                
+            {% endif %}
+        {%- endfor %}
+{% endmacro %}

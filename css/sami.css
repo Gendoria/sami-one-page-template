@@ -1,0 +1,183 @@
+html, body, #content {
+    height: 100%;
+}
+
+/* Namespace breadcrumbs */
+
+.namespace-breadcrumbs .breadcrumb {
+    margin: 0 0 12px;
+    border-radius: 0 0 4px 4px;
+    padding-left: 35px;
+}
+
+.namespace-breadcrumbs .breadcrumb > li + li:before {
+    content: "";
+}
+.namespace-breadcrumbs .breadcrumb > .backslash {
+    color: #ccc;
+}
+
+/** General typography **/
+
+abbr[title], abbr[data-original-title], abbr {
+    border-bottom: none;
+    cursor: pointer;
+}
+
+a abbr {
+    cursor: pointer;
+}
+
+.method-description table, .description table {
+    border: solid 1px #ccc;
+    padding: 1em;
+    margin: 1em;
+}
+
+.method-description td, .method-description th,
+.description td, .description th {
+    padding: 0.75em 1.25em;
+}
+
+.method-description tbody tr:nth-child(even),
+.description tbody tr:nth-child(even) {
+    background: #edf3fe;
+}
+
+.method-description tbody tr:nth-child(odd),
+.description tbody tr:nth-child(odd) {
+    background: #fff;
+}
+
+.method-description thead tr,
+.description thead tr {
+    background: #edf3fe;
+}
+
+/** General Sami styling **/
+
+.underlined > .row {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#footer {
+    text-align: right;
+    margin: 30px;
+    font-size: 11px;
+}
+
+.description {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #efefef;
+}
+
+.description p {
+    padding: 0;
+    margin: 8px 0;
+}
+
+.method-description {
+    margin: 0 0 24px 0;
+}
+
+.details {
+    padding-left: 30px;
+}
+
+#method-details .method-item {
+    margin-bottom: 30px;
+}
+
+.method-item h3,
+.method-item h3 code {
+    background-color: #eee;
+}
+
+.method-item h3 {
+    padding: 4px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.location {
+    font-size: 11px;
+    float: right;
+    font-style: italic;
+}
+
+.namespace-list a {
+    padding: 3px 8px;
+    margin: 0 5px 5px 0;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    display: inline-block;
+    border-radius: 4px;
+}
+
+.no-description {
+    color: #ccc;
+    font-size: 90%;
+}
+
+/** Code and pre tags **/
+
+tt, code, pre {
+    font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+code {
+    padding: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    margin: 0;
+    font-size: 85%;
+    background-color: rgba(0,0,0,0.04);
+    border-radius: 3px;
+    color: #333;
+}
+
+pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+}
+
+h2 {
+}
+
+.class-row {
+    border-bottom: solid #333 2px;
+    padding-bottom: 3em;
+}
+
+.class-row:last-of-type {
+    border-bottom-width: 0;
+    margin-bottom: 0;
+}
+
+.page {
+    page-break-after: always;
+}
+
+.title-page h1 {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+a.anchor-link {
+    color: #333;
+    opacity: 0.5;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 60%;
+}
+
+a.anchor-link:hover {
+    opacity: 0.9;
+}

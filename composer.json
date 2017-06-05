@@ -1,0 +1,17 @@
+{
+    "name": "gendoria/sami-one-page-template",
+    "description": "Sami template for one page documentation.",
+    "type": "sami-theme",
+    "require-dev": {
+        "sami/sami": "~4.0"
+    },
+    "license": "LGPL-3.0",
+    "authors": [
+        {
+            "name": "Gendoria",
+            "email": "gendoria@gendoria.pl"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

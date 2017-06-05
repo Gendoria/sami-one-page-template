@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>{% block title project.config('title') %}</title>
+
+    {% block head %}
+        <link rel="stylesheet" type="text/css" href="{{ path('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ path('css/bootstrap-theme.min.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ path('css/sami.css') }}">
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    {% endblock %}
+</head>
+
+{% block html %}
+    <body>
+        {% block content '' %}
+    </body>
+{% endblock %}
+
+</html>

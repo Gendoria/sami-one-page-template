@@ -1,0 +1,30 @@
+{% from _self import element %}
+
+{{element(tree)}}
+
+{% macro element(tree) %}
+    {% from _self import element %}
+    {% from "macros.twig" import deprecated, class_anchor %}
+
+    <ul>
+        {%- for element in tree -%}
+            {% if element[2] %}
+                <li data-name="namespace:{{ element[1]|replace({'\\': '_'})|raw }}">
+                    <div class="hd">
+                        {{ element[0]|raw }}
+                    </div>
+                    <div class="bd">
+                        {{ element(element[2]) -}}
+                    </div>
+                </li>
+            {% else %}
+                <li data-name="class:{{ (element[1].name)|replace({'\\': '_'}) }}">
+                    <div class="hd leaf">
+                        <a href="#{{ class_anchor(element[1]) }}">{{ element[0] }}</a>
+                        {{ deprecated(element[1]) }}
+                    </div>
+                </li>
+            {% endif %}
+        {%- endfor %}
+    </ul>
+{% endmacro %}
