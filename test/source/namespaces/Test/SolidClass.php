@@ -2,6 +2,8 @@
 
 namespace Test;
 
+use Test\Interfaces\TestInterface;
+
 /**
  * This is a solid class extending abstract class.
  *

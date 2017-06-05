@@ -2,8 +2,10 @@
 
 namespace Test;
 
+use Test\Interfaces\TestInterface;
+
 /**
- * Description of AbstractClass
+ * Abstract class.
  *
  * @author Tomasz Struczyński <t.struczynski@gmail.com>
  */
