@@ -9,4 +9,4 @@ before_script:
 
 script: 
     - ./vendor/bin/sami.php update --force ./test/sami.php
-    - cat ./test/build/index.html
+    - test -f ./test/build/index.html
