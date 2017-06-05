@@ -47,8 +47,9 @@ abstract class AbstractClass
      * @param string $param1
      * @param int $param2
      * @param TestInterface $param3
+     * @param ClassParameter $param4
      */
-    public function doSomething(string $param1, int $param2, TestInterface $param3)
+    public function doSomething(string $param1, int $param2, TestInterface $param3, ClassParameter $param4)
     {
         
     }
