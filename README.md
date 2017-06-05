@@ -47,7 +47,7 @@ return new Sami($iterator, array(
 
 Via [Composer][]:
 
-    $ composer require "gendoria/sami-one-page-template=~1.0"
+    $ composer require "gendoria/sami-one-page-theme=~1.0"
 
 ## License
 
